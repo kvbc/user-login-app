@@ -61,6 +61,14 @@ public class UserController {
         return repo.findAll();
     }
 
+    @GetMapping("/{id}")
+    Response getUser (@PathVariable Long id) {
+        Optional<User> user = repo.findById(id);
+        if (user.isPresent())
+            return Response.success(user.get());
+        return Response.userNotFound();
+    }
+
     @PostMapping("/register")
     Response registerUser (@RequestBody Credentials cred) {
         if (cred.areWrong())
@@ -83,7 +91,7 @@ public class UserController {
         if (users.isEmpty())
             return Response.userNotFound();
 
-        User user = users.get(0); // since logins (usernames) are unique
+        User user = users.get(0); // since each login is unique
         if (!userPasswordMatches(user, cred.password))
             return Response.wrongPassword();
 
