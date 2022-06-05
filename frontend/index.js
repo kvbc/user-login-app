@@ -2,10 +2,6 @@ const APIUrl = "http://localhost:8080/api/user";
 const APIRegisterUrl = "http://localhost:8080/api/user/register";
 const APILoginUrl = "http://localhost:8080/api/user/login";
 
-function jsonEmpty (json) {
-    return Object.keys(json).length === 0;
-}
-
 function APIRequest (method, url, json, callback) {
     var req = {
         "url": url,
