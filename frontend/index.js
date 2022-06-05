@@ -51,6 +51,6 @@ $(document).ready(() => {
     updateRegisteredUsersTable();
     $("#btn-log").on("click", () => APICredentials("POST", APILoginUrl, "Logged in successfully"));
     $("#btn-reg").on("click", () => APICredentials("POST", APIRegisterUrl, "Your account has been registered"));
-    $("#btn-del").on("click", () => APICredentials("DELETE", APIDeleteUrl, "Your account has been deleted"));
+    $("#btn-del").on("click", () => APICredentials("POST", APIDeleteUrl, "Your account has been deleted"));
     $("#btn-delall").on("click", () => APIRequest("DELETE", APIUrl, {}, () => updateRegisteredUsersTable()));
 })
