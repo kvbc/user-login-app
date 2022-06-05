@@ -102,7 +102,7 @@ public class UserController {
         return Response.success(user);
     }
 
-    @DeleteMapping("/delete")
+    @PostMapping("/delete")
     public Response deleteUser (@RequestBody Credentials cred) {
         Response res = loginUser(cred);
         if (!res.user.isPresent()) // error trying to log in, return original response
