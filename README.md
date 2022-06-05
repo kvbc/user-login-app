@@ -20,20 +20,20 @@ CREATE TABLE users(
 
 ### REST API
 
-Retrieve the information of user with id of **MY_ID**
+Retrieve the information of user with id of **MY_ID**  
 `curl -X GET http://localhost:8080/api/user/MY_ID`
 
-Retrieve the list of all registered users
+Retrieve the list of all registered users  
 `curl -X GET http://localhost:8080/api/user`
 
-Delete all registered users
+Delete all registered users  
 `curl -X DELETE http://localhost:8080/api/user`
 
 Register user **MY_LOGIN** with password **MY_PASSWORD**  
 `curl -X POST -H "Content-type: application/json" -d "{\"login\":\"MY_LOGIN\",\"password\":\"MY_PASSWORD\"}" http://localhost:8080/api/user/register`
 
-Login as user **MY_LOGIN** with password **MY_PASSWORD**
+Login as user **MY_LOGIN** with password **MY_PASSWORD**  
 `curl -X POST -H "Content-type: application/json" -d "{\"login\":\"MY_LOGIN\",\"password\":\"MY_PASSWORD\"}" http://localhost:8080/api/user/login`
 
-Delete user **MY_LOGIN** with password **MY_PASSWORD**
+Delete user **MY_LOGIN** with password **MY_PASSWORD**  
 `curl -X DELETE -H "Content-type: application/json" -d "{\"login\":\"MY_LOGIN\",\"password\":\"MY_PASSWORD\"}" http://localhost:8080/api/user/delete`
