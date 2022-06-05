@@ -1,6 +1,6 @@
 # user-login-app
 
-Spring dependencies:
+Spring dependencies
 - Spring Web
 - Spring Security
 - Spring Data JPA
