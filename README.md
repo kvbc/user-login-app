@@ -1,5 +1,7 @@
 # user-login-app
 
+The .css is 99.9% stolen
+
 Spring dependencies
 - Spring Web
 - Spring Security
