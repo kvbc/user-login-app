@@ -22,7 +22,7 @@ CREATE TABLE users(
 
 ### REST API
 
-Retrieve the information of user of ID **MY_ID**  
+Retrieve the information of user with the ID of **MY_ID**  
 `curl -X GET http://localhost:8080/api/user/MY_ID`
 
 Retrieve the list of all registered users  
