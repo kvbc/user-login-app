@@ -36,4 +36,4 @@ Login as user **MY_LOGIN** with password **MY_PASSWORD**
 `curl -X POST -H "Content-type: application/json" -d "{\"login\":\"MY_LOGIN\",\"password\":\"MY_PASSWORD\"}" http://localhost:8080/api/user/login`
 
 Delete user **MY_LOGIN** with password **MY_PASSWORD**  
-`curl -X DELETE -H "Content-type: application/json" -d "{\"login\":\"MY_LOGIN\",\"password\":\"MY_PASSWORD\"}" http://localhost:8080/api/user/delete`
+`curl -X POST -H "Content-type: application/json" -d "{\"login\":\"MY_LOGIN\",\"password\":\"MY_PASSWORD\"}" http://localhost:8080/api/user/delete`
