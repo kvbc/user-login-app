@@ -20,5 +20,5 @@ CREATE TABLE users(
 
 REST API
 
-Register user MY_LOGIN with password MY_PASSWORD
+Register user **MY_LOGIN** with password **MY_PASSWORD**  
 `curl -X POST -d "{\"login\":\"MY_LOGIN\",\"password\":\"MY_PASSWORD\"}" http://localhost:8080/api/user/register`
