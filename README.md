@@ -1,6 +1,6 @@
 # user-login-app
 
-![Przechwytywanie](https://user-images.githubusercontent.com/64214044/172055886-6198a90a-c504-4711-a127-501c3735070b.JPG)
+![Przechwytywanie](https://user-images.githubusercontent.com/64214044/172055916-8e28d59b-d298-45f6-91b6-3ba81eae38f5.JPG)
 
 The .css is 99.9% stolen
 
