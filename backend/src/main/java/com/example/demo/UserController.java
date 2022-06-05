@@ -61,6 +61,10 @@ public class UserController {
         return repo.findAll();
     }
 
+    @DeleteMapping public void deleteUsers () {
+        repo.deleteAll();
+    }
+
     @GetMapping("/{id}")
     Response getUser (@PathVariable Long id) {
         Optional<User> user = repo.findById(id);
