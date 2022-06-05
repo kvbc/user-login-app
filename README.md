@@ -1,2 +1,8 @@
 # user-login-app
-User login app build with front-end communicating with Spring back-end through REST API
+
+Spring dependencies:
+- Spring Web
+- Spring Security
+- Spring Data JPA
+- MySQL Driver
+- Lombok
