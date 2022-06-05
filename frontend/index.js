@@ -30,7 +30,7 @@ function updateRegisteredUsersTable () {
     });
 }
 
-function APILoginRegisterDelete (method, url, success_msg) {
+function APICredentials (method, url, success_msg) {
     APIRequest(method, url, {
         "login": $("#i-login").val(),
         "password": $("#i-pwd").val()
@@ -48,7 +48,7 @@ function APILoginRegisterDelete (method, url, success_msg) {
 
 $(document).ready(() => {
     updateRegisteredUsersTable();
-    $("#btn-log").on("click", () => APILoginRegisterDelete("POST", APILoginUrl, "Logged in successfully"));
-    $("#btn-reg").on("click", () => APILoginRegisterDelete("POST", APIRegisterUrl, "Your account has been registered"));
-    $("#btn-del").on("click", () => APILoginRegisterDelete("DELETE", APIUrl, "Your account has been deleted"));
+    $("#btn-log").on("click", () => APICredentials("POST", APILoginUrl, "Logged in successfully"));
+    $("#btn-reg").on("click", () => APICredentials("POST", APIRegisterUrl, "Your account has been registered"));
+    $("#btn-del").on("click", () => APICredentials("DELETE", APIUrl, "Your account has been deleted"));
 })
