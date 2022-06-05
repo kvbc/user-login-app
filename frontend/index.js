@@ -1,6 +1,7 @@
 const APIUrl = "http://localhost:8080/api/user";
 const APIRegisterUrl = "http://localhost:8080/api/user/register";
 const APILoginUrl = "http://localhost:8080/api/user/login";
+const APIDeleteUrl = "http://localhost:8080/api/user/delete"
 
 function APIRequest (method, url, json, callback) {
     var req = {
@@ -50,5 +51,6 @@ $(document).ready(() => {
     updateRegisteredUsersTable();
     $("#btn-log").on("click", () => APICredentials("POST", APILoginUrl, "Logged in successfully"));
     $("#btn-reg").on("click", () => APICredentials("POST", APIRegisterUrl, "Your account has been registered"));
-    $("#btn-del").on("click", () => APICredentials("DELETE", APIUrl, "Your account has been deleted"));
+    $("#btn-del").on("click", () => APICredentials("DELETE", APIDeleteUrl, "Your account has been deleted"));
+    $("#btn-delall").on("click", () => APIRequest("DELETE", APIUrl, {}, () => updateRegisteredUsersTable()));
 })
